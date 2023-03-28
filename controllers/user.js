@@ -1,6 +1,10 @@
 //moduler 
 var mysql = require('mysql');
 
+var host = "database1.cyoygyccvrkb.ap-south-1.rds.amazonaws.com";
+var username ="admin";
+var password= "123456789";
+var db="hotel";
 
 
 //authentication check
@@ -34,10 +38,10 @@ exports.getLogin = (req, res, next) => {
 exports.postLogin = (req, res, next) => {
 
    var connectDB = mysql.createConnection({
-      host: "database-2.cybxsdwsqxqj.ap-south-1.rds.amazonaws.com",
-      user: "chandu",
-      password: "manjunath",
-      database: "hotel"
+      host: host,
+      user: username,
+      password: password,
+      database: db
    });
 
    data = "SELECT * " +
@@ -72,10 +76,10 @@ exports.getCreateAccount = (req, res, next) => {
 exports.postCreateAccount = (req, res, next) => {
 
    var connectDB = mysql.createConnection({
-      host: "database-2.cybxsdwsqxqj.ap-south-1.rds.amazonaws.com",
-      user: "chandu",
-      password: "manjunath",
-      database: "hotel"
+      host: host,
+      user: username,
+      password: password,
+      database: db
    });
 
    var p1 = req.body.pass;
@@ -106,10 +110,10 @@ exports.getCategory = (req, res, next) => {
 exports.postCategory = (req, res, next) => {
    //console.log(req.body);
    var connectDB = mysql.createConnection({
-      host: "database-2.cybxsdwsqxqj.ap-south-1.rds.amazonaws.com",
-      user: "chandu",
-      password: "manjunath",
-      database: "hotel"
+      host: host,
+      user: username,
+      password: password,
+      database: db
    });
 
    data = "SELECT * " +
@@ -141,10 +145,10 @@ exports.postStatus = (req, res, next) => {
 
    //console.log(req.body);
    var connectDB = mysql.createConnection({
-      host: "database-2.cybxsdwsqxqj.ap-south-1.rds.amazonaws.com",
-      user: "chandu",
-      password: "manjunath",
-      database: "hotel"
+      host: host,
+      user: username,
+      password: password,
+      database: db
    });
    var date = req.body.date;
    //console.log(date)
@@ -175,10 +179,10 @@ exports.postStatus = (req, res, next) => {
 exports.getShowStatus = (req, res, next) => {
 
    var connectDB = mysql.createConnection({
-      host: "database-2.cybxsdwsqxqj.ap-south-1.rds.amazonaws.com",
-      user: "chandu",
-      password: "manjunath",
-      database: "hotel"
+      host: host,
+      user: username,
+      password: password,
+      database: db
    });
 
    data = "SELECT * " +
@@ -209,10 +213,10 @@ exports.getShowStatus = (req, res, next) => {
 exports.deleteBooking =(req,res,next)=>{
    //console.log(req.body);
    var connectDB = mysql.createConnection({
-      host: "database-2.cybxsdwsqxqj.ap-south-1.rds.amazonaws.com",
-      user: "chandu",
-      password: "manjunath",
-      database: "hotel"
+      host: host,
+      user: username,
+      password: password,
+      database: db
    });
 
    data = "DELETE FROM bookingstatus " +

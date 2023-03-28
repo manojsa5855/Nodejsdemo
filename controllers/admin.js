@@ -1,7 +1,9 @@
 var mysql = require('mysql');
 var formidable = require('formidable');
-const path = require('path');
-
+var host = "database1.cyoygyccvrkb.ap-south-1.rds.amazonaws.com";
+var username ="admin";
+var password= "123456789";
+var db="hotel";
 
 // login get request
 exports.getLogin = (req, res, next) => {
@@ -10,10 +12,10 @@ exports.getLogin = (req, res, next) => {
     }
     else {
         var connectDB = mysql.createConnection({
-            host: "database-2.cybxsdwsqxqj.ap-south-1.rds.amazonaws.com",
-            user: "chandu",
-            password: "manjunath",
-            database: "hotel"
+            host: host,
+            user: username,
+            password: password,
+            database: db
         });
         data1 = "SELECT * " +
             "FROM  bookingstatus " +
@@ -36,10 +38,10 @@ exports.getLogin = (req, res, next) => {
 exports.postLogin = (req, res, next) => {
 
     var connectDB = mysql.createConnection({
-        host: "database-2.cybxsdwsqxqj.ap-south-1.rds.amazonaws.com",
-        user: "chandu",
-        password: "manjunath",
-        database: "hotel"
+        host: host,
+        user: username,
+        password: password,
+        database: db
     });
 
     data = "SELECT * " +
@@ -80,10 +82,10 @@ exports.postChnageStatus = (req, res, next) => {
     //console.log(req.body);
 
     var connectDB = mysql.createConnection({
-        host: "database-2.cybxsdwsqxqj.ap-south-1.rds.amazonaws.com",
-        user: "chandu",
-        password: "manjunath",
-        database: "hotel"
+        host: host,
+        user: username,
+        password: password,
+        database: db
     });
 
     var value = 0;
@@ -137,10 +139,10 @@ exports.getAddHotel = (req, res, next) => {
 exports.postAddHotel = (req, res, next) => {
    
     var connectDB = mysql.createConnection({
-        host: "database-2.cybxsdwsqxqj.ap-south-1.rds.amazonaws.com",
-        user: "chandu",
-        password: "manjunath",
-        database: "hotel"
+        host: host,
+        user: username,
+        password: password,
+        database: db
     });
 
     //var
@@ -232,10 +234,10 @@ exports.postSearch = (req, res, next) => {
     //console.log(req.body);
 
     var connectDB = mysql.createConnection({
-        host: "database-2.cybxsdwsqxqj.ap-south-1.rds.amazonaws.com",
-        user: "chandu",
-        password: "manjunath",
-        database: "hotel"
+        host: host,
+        user: username,
+        password: password,
+        database: db
     });
 
     data = "SELECT * " +
@@ -256,10 +258,10 @@ exports.postSearch = (req, res, next) => {
 exports.getUpdate = (req, res, next) => {
     // console.log(req.body);
     var connectDB = mysql.createConnection({
-        host: "database-2.cybxsdwsqxqj.ap-south-1.rds.amazonaws.com",
-        user: "chandu",
-        password: "manjunath",
-        database: "hotel"
+        host: host,
+        user: username,
+        password: password,
+        database: db
     });
 
     data = "SELECT * " +
@@ -282,10 +284,10 @@ exports.getUpdate = (req, res, next) => {
 exports.updatePrevData = (req, res, next) => {
 
     var connectDB = mysql.createConnection({
-        host: "database-2.cybxsdwsqxqj.ap-south-1.rds.amazonaws.com",
-        user: "chandu",
-        password: "manjunath",
-        database: "hotel"
+        host: host,
+        user: username,
+        password: password,
+        database: db
     });
 
     data = "UPDATE category " +

@@ -9,6 +9,8 @@ trigger:
 pool:
   name: self-hosted
   vmImage: ubuntu-latest
+  demands:
+    - agent.name -equals 'MLI01189'
 
 steps:
 - task: NodeTool@0
